@@ -40,4 +40,9 @@ InfluxDB:
     size: "10Gi"
     storageClassName: "standard"
   service:
-    type: ClusterIP
+    type: ClusterIP # or NodePort / LoadBalancer
+
+jmeterVts:
+  service:
+    type: ClusterIP  # or NodePort / LoadBalancer
+

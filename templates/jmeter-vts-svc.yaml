@@ -5,9 +5,9 @@ metadata:
   labels:
     app: {{ .Release.Name }}-jmeter-vts
 spec:
+  type: {{ .Values.jmeterVts.service.type | default "ClusterIP" }}
   ports:
     - port: 8080
       targetPort: 8080
   selector:
     app: {{ .Release.Name }}-jmeter-vts
-  type: "ClusterIP"
