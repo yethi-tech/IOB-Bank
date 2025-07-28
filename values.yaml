@@ -24,11 +24,11 @@ Grafana:
   username: admin # Grafana admin username
   password: admin123 # Grafana admin password
   service:
-    type: ClusterIP # Options: ClusterIP, NodePort, LoadBalancer
+    type: NodePort # Options: ClusterIP, NodePort, LoadBalancer
     port: 3000 # External port for accessing Grafana
   persistence:
     enabled: true
-    size: 2Gi # Size of the persistent volume
+    size: 20Gi # Size of the persistent volume
     storageClassName: standard # Storage class for PVC
 InfluxDB:
   username: "admin" # InfluxDB admin username
@@ -37,12 +37,12 @@ InfluxDB:
   bucket: "jmeter" # Bucket name for storing data
   retention: "30d" # Data retention period
   persistence:
-    size: "10Gi"
+    size: "30Gi"
     storageClassName: "standard"
   service:
-    type: ClusterIP # or NodePort / LoadBalancer
+    type: NodePort # or NodePort / LoadBalancer
 
 jmeterVts:
   service:
-    type: ClusterIP  # or NodePort / LoadBalancer
+    type: NodePort  # or NodePort / LoadBalancer
 

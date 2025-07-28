@@ -3,12 +3,12 @@ entries:
   IOB-bank:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-07-28T17:14:12.2108204+05:30"
+    created: "2025-07-28T19:08:47.4788699+05:30"
     description: A Helm chart for Kubernetes
-    digest: 0756bfec031aa35cffbc732128f18b7f2b35e978187735336b873b598bc31707
+    digest: 059d2c83a9bacd8b603906966ce85b0184204f5fd2448cf9550da685fe239f1e
     name: IOB-bank
     type: application
     urls:
     - https://yethi-tech.github.io/IOB-Bank/IOB-bank-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-28T17:14:12.2085097+05:30"
+generated: "2025-07-28T19:08:47.4778133+05:30"
