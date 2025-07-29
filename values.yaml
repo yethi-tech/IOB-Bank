@@ -28,7 +28,7 @@ Grafana:
     port: 3000 # External port for accessing Grafana
   persistence:
     enabled: true
-    size: 20Gi # Size of the persistent volume
+    size: 10Gi # Size of the persistent volume
     storageClassName: standard # Storage class for PVC
 InfluxDB:
   username: "admin" # InfluxDB admin username

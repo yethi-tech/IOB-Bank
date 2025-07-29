@@ -57,5 +57,5 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: {{ .Values.Grafana.persistence.size | default "2Gi" }}
+      storage: {{ .Values.Grafana.persistence.size | default "10Gi" }}
   storageClassName: {{ .Values.Grafana.persistence.storageClassName | default "Standard" }}
