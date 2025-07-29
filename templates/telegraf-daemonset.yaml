@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: telegraf
-  namespace: default
+  name: {{ .Release.Name }}-telegraf
+  namespace: {{ .Release.Namespace }}
   labels:
-    app: telegraf
+    app: {{ .Release.Name }}-telegraf
 spec:
   selector:
     matchLabels:
-      app: telegraf
+      app: {{ .Release.Name }}-telegraf
   template:
     metadata:
       labels:
-        app: telegraf
+        app: {{ .Release.Name }}-telegraf
         dynatrace.com/injection: "disabled"
       annotations:
         dynatrace.com/injected: "false"
     spec:
-      serviceAccountName: telegraf
+      serviceAccountName: {{ .Release.Name }}-telegraf
       automountServiceAccountToken: true
       securityContext:
         fsGroup: 65534
@@ -47,7 +47,7 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: telegraf-config
+            name: {{ .Release.Name }}-telegraf-config
             items:
               - key: telegraf.conf
                 path: telegraf.conf

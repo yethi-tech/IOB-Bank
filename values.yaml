@@ -34,7 +34,8 @@ InfluxDB:
   username: "admin" # InfluxDB admin username
   password: "Admin@123" # InfluxDB admin password
   org: "jmeter" # Organization name for InfluxDB
-  bucket: "jmeter" # Bucket name for storing data
+  bucket: "jmeter"
+  token: "YOUR_INFLUXDB_TOKEN_HERE"  # Bucket name for storing data
   retention: "30d" # Data retention period
   persistence:
     size: "30Gi"
